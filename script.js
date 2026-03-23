@@ -1,21 +1,22 @@
-// Pegar os elementos
-const btnAbrir = document.querySelector('a[href="login.html"]'); //Seleciona o link cadastre-se
-const drawer = document.getElemtedById('drawerCadastro');
-const overlay = document.getElementedById('ooverlay');
-const btnFechar = document.getElemtedById('fecharDrawer');
+console.log("O arquivo script.js foi carregado com sucesso!");
 
-//Função para abrir
-btnAbrir.addEventListener('click', function(e){
-    e.preventDefault(); //Garante que a página não recarregue
-    drawer.classList.add('aberto'); //Adiciona a classe que move o drawer para tela
-    overlay.style.display = 'ativo'; // Mostra o fundo desfocado
-});
+const btnAbrir = document.getElementById('abrirCadastro');
+const drawer = document.getElementById('drawerCadastro');
+const overlay = document.getElementById('overlay');
 
-//Função para fechar (no X ou clicando no fundo)
-function fechar() {
-    drawer.classList.remove('aberto');
-    overlay.style.display = 'ativo';
+if (btnAbrir) {
+    btnAbrir.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log("Botão clicado!");
+        
+        if (drawer && overlay) {
+            drawer.classList.add('aberto');
+            overlay.style.display = 'block';
+            console.log("Classes adicionadas!");
+        } else {
+            console.error("Erro: Não encontrei o ID 'drawerCadastro' ou 'overlay' no HTML.");
+        }
+    });
+} else {
+    console.error("Erro: Não encontrei o ID 'abrirCadastro' no seu menu HTML.");
 }
-
-btnFechar.addEventListener('click', fechar);
-overlay.addEventListener('click', fechar);

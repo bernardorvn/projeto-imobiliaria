@@ -148,7 +148,7 @@ nav ul {
     z-index: 999;
 }
 .overlay.ativo {
-    display: block; /* Só aparece quando o JS adiciona a classe 'ativo' */
+    display: block !important; /* Só aparece quando o JS adiciona a classe 'ativo' */
 }
 /* A gaveta (Drawer) */
 .drawer {
@@ -165,7 +165,7 @@ nav ul {
 }
 /* Classe que o JS vai adicionar para mostrar */
 .drawer.aberto {
-    right: 0; /*Desliza para dentro da tela */
+    right: 0 !important; /*Desliza para dentro da tela */
 }
 
 /*Estilos basicos do formulario */

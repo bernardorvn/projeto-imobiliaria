@@ -1,22 +1,34 @@
-console.log("O arquivo script.js foi carregado com sucesso!");
-
+// 1. Seleciona os elementos
 const btnAbrir = document.getElementById('abrirCadastro');
 const drawer = document.getElementById('drawerCadastro');
 const overlay = document.getElementById('overlay');
+const btnFechar = document.getElementById('fecharDrawer');
 
+// 2. Função Unificada para Fechar
+function fecharGaveta() {
+    console.log("Tentando fechar...");
+    if (drawer) drawer.classList.remove('aberto');
+    if (overlay) {
+        overlay.style.display = 'none';
+        overlay.classList.remove('ativo');
+    }
+}
+
+// 3. Evento para Abrir
 if (btnAbrir) {
     btnAbrir.addEventListener('click', function(e) {
         e.preventDefault();
-        console.log("Botão clicado!");
-        
-        if (drawer && overlay) {
-            drawer.classList.add('aberto');
-            overlay.style.display = 'block';
-            console.log("Classes adicionadas!");
-        } else {
-            console.error("Erro: Não encontrei o ID 'drawerCadastro' ou 'overlay' no HTML.");
-        }
+        drawer.classList.add('aberto');
+        overlay.style.display = 'block';
+        overlay.classList.add('ativo');
     });
-} else {
-    console.error("Erro: Não encontrei o ID 'abrirCadastro' no seu menu HTML.");
+}
+
+// 4. Eventos para Fechar (X e Clique no Fundo)
+if (btnFechar) {
+    btnFechar.onclick = fecharGaveta;
+}
+
+if (overlay) {
+    overlay.onclick = fecharGaveta;
 }

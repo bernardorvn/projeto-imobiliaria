@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página teste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Meu Comércio</div>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#" id="abrirCadastro">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1> Encontre o serviço ideial para você </h1>
+        <p> Qualidade e confiança em cada detalhe </p>
+        <div class="busca">
+            <input type="text" placeholder="O que você procura?">
+            <button>Buscar</button>
+        </div>
+    </section>
+
+    <section class="vitrine">
+        <h2>Nossos Destaques</h2>
+        <div class="grid-servicos">
+
+            <article class="card">
+                <img src="img/casa.jpg" alt="Serviço 1">
+                <div class="card-info">
+                    <h3>Condominio Fechado</h3>
+                    <p>Valores Sob Consulta</p>
+                    <button> Ver Detalhes </button>
+                </div>
+            </article>
+
+            <article class="card"> 
+                <img src="img/ap.jpg" alt="Serviço 2">
+                <div class="card-info">
+                    <h3>Apartamento</h3>
+                    <p>Valores Sob Consulta</p>
+                    <button>Ver Detalhes</button>
+                </div>
+            </article>
+        </div>
+    </section>
+    
+    <div id="overlay" class="overlay"></div>
+
+    <div id="drawerCadastro" class="drawer">
+        <button id="fecharDrawer" class="btn-fechar">&times;</button>
+    
+        <h2>Fale Conosco</h2>
+        <P>Preencha os dados e nossa equipe entrará em contato.</P>
+
+        <form id="formContato">
+            <label>Nome:</label>
+            <input type="text" placeholder="Seu nome completo" required>
+
+            <label>Número/Whatsapp:</label>
+            <input tyoe="tel" placeholder="(12) 99999-9999" required>
+
+            <label>Imóvel Desejado</label>
+            <select>
+                <option value="casa"> Casa </option>
+                <option value="apartamento"> Apartamento </option>
+                <option value="terreno"> Terreno </option>
+            </select>
+
+            <label>Intervalo de Valor:</label>
+            <input type="text" placeholder="Ex: R$ 80.000,00 a 300.000,00">
+
+            <button type="submit" class="btn-enviar"> Solicitar Contato </button>
+        </form>
+    </div>
+
+
+
+
+</body>
+
+</html>

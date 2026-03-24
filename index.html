@@ -62,11 +62,11 @@
         <P>Preencha os dados e nossa equipe entrará em contato.</P>
 
         <form id="formContato">
-            <label>Nome:</label>
+            <label>Nome</label>
             <input type="text" placeholder="Seu nome completo" required>
 
             <label>Número/Whatsapp:</label>
-            <input tyoe="tel" placeholder="(12) 99999-9999" required>
+            <input type="tel" placeholder="(12) 99999-9999" required>
 
             <label>Imóvel Desejado</label>
             <select>
@@ -74,6 +74,11 @@
                 <option value="apartamento"> Apartamento </option>
                 <option value="terreno"> Terreno </option>
             </select>
+
+            <label for="bairro-input">Bairro</label>
+            <input type="text" id="bairro-input" list="lista-bairros" placeholder="Digite o bairro desejado:">
+            
+            <datalist id="lista-bairros"></datalist>
 
             <label>Intervalo de Valor:</label>
             <input type="text" placeholder="Ex: R$ 80.000,00 a 300.000,00">

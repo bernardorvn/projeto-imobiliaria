@@ -32,3 +32,30 @@ if (btnFechar) {
 if (overlay) {
     overlay.onclick = fecharGaveta;
 }
+// 1. Nossa lista de bairros de Pinda
+const bairrosPinda = [
+    "Água Preta", "Alto do Cardoso", "Alto do Tabaú", "Alvarenga", "Anhanguera", 
+    "Araretama", "Arco-Íris", "Aroeira", "Bela Vista", "Bem Viver", "Boa Vista", 
+    "Bonsucesso", "Borba", "Bosque", "Campinas", "Campo Alegre", "Campos Maia", 
+    "Castolira", "Centro", "Cidade Jardim", "Cidade Nova", "Cícero Prado", 
+    "Coruputuba", "Crispim", "Delta", "Dom Bosco", "Estância Alzira", "Feital", 
+    "Galega", "Goiabal", "Ipiranga", "Ipê", "Jardim Azeredo", "Jardim Eloyna", 
+    "Jardim Imperial", "Jardim Mariana", "Jardim Princesa", "Lessa", "Liberdade", 
+    "Mantiqueira", "Maricá", "Mombaça", "Moreira César", "Morumbi", "Ouro Verde", 
+    "Parque das Nações", "Parque das Palmeiras", "Pasin", "Portal dos Eucaliptos", 
+    "Real Ville", "Residencial Andrade", "Santana", "Santa Cecília", "Santa Luzia", 
+    "Santa Rita", "São Benedito", "Socorro", "Tabaú", "Terra dos Ipês", "Triângulo", 
+    "Vale das Acácias", "Vila Suíça", "Vila Verde", "Village Sol", "Vista Alegre"
+];
+// Função para preencher o datalist automaticamente
+function carregarBairros() {
+    const datalist = document.getElementedById('lista-bairros');
+
+    bairrosPinda.forEach(bairro => {
+        let option = document.createElement('option');
+        option.value = bairro;
+        dataList.appendChild(option);
+     });
+}
+// Executa assim que o script carregar
+carregarBairros();

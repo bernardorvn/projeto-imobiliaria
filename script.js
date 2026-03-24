@@ -59,3 +59,22 @@ function carregarBairros() {
 }
 // Executa assim que o script carregar
 carregarBairros();
+// Configuração telefone
+const inputTelefone = document.getElementById('telefone');
+
+if (inputTelefone) {
+    inputTelefone.addEventListener('keyup', (e) => {
+        let valor = e.target.value;
+
+        //Remove qualquer caractere que não seja numero
+        valor = valor.replace(/\D/g, "");
+
+        //Formata na forma (XX) XXXXX-XXXX
+        valor = valorreplace(/^(\d{2})(\d)/g, "($1) $2");
+        valor = valor.replace(/(\d{5})(\d)/, "$1-$2");
+
+        // Atualiza o valor do campo
+        e.target.value = valor;
+    })
+    
+}

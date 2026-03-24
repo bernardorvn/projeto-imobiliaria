@@ -196,3 +196,68 @@ nav ul {
     font-weight: bold; 
     margin-top: 10px; 
 }
+/* IMOVEIS.HTML */
+.vitrine-imoveis {
+    padding: 100px 5% 50px;
+    background-color: white;
+}
+.grid-imoveis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.card-imovel {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0,1);
+    position: relative; /*Necessário para a tag ficar por cima*/
+}
+/*Tags de venda/aluguel*/
+.tag-venda, .tag-aluguel {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.tag-venda {
+    background-color: #27ae60;
+}
+.tag-aluguel {
+    background-color: #2980b9;
+}
+.info-movel {
+    padding: 20px;
+}
+.preco {
+    font-size: 1.4rem;
+    color: #1a237e;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.detalhes-icones {
+    display: flex;
+    gap: 15px;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+.btn-detalhes {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid #1a237e;
+    color: #1a237e;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-detalhes:hover {
+    background: #1a237e;
+    color: white;
+}
